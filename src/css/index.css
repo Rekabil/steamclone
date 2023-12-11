@@ -95,7 +95,7 @@ body {
 .installsteam_btn {
   display: inline-block !important;
   position: relative;
-  height: 21px;
+  height: 27px;
   line-height: 24px !important;
   margin-right: 3px !important;
   display: inline-block;
@@ -143,4 +143,130 @@ body {
   position: relative;
   border-radius: 0;
   padding: 1px !important;
+}
+
+.store_header {
+  position: relative;
+  width: 940px;
+  margin: 0 auto !important;
+}
+.content {
+  height: 66px;
+  position: relative;
+  width: 940px;
+  margin: 0 auto !important;
+  z-index: 300;
+}
+.storeControls {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  text-align: right;
+  z-index: 300;
+  font-size: 11px;
+}
+
+.shopWishlist {
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/storemenu/background_wishlist.jpg);
+  background-color: rgba(255, 255, 255, 0.4);
+  background-position: -34px 20px;
+  height: 20px;
+  position: relative;
+  margin-left: 1px !important;
+  border-radius: 1px;
+  float: left;
+  color: #e5e4dc !important;
+  padding: 0 25px !important;
+  margin: 0 1px !important;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.shopCart {
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/storemenu/background_cart.jpg);
+  background-color: rgba(164, 208, 7, 0.4);
+  background-position: -34px 20px;
+  padding: 0 25px;
+  margin: 0 1px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.store_nav {
+  margin: 7px 0 !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+  height: 35px;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(62, 103, 150, 0.919) 11.38%,
+    rgba(58, 120, 177, 0.8) 25.23%,
+    rgb(15, 33, 110) 100%
+  );
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+.store_nav_item {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  color: #d9dadd !important;
+  line-height: 33px !important;
+  padding: 0 15px !important;
+  display: block;
+  background-color: none !important;
+}
+.store_tab {
+  min-width: 18rem !important;
+}
+.store_tab2 {
+  min-width: 50rem !important;
+}
+.search_spacer {
+  flex: 1;
+  width: 20px;
+}
+.search_area {
+  float: none;
+  padding: 3px 4px 2px !important;
+  height: 30px !important;
+}
+.search_input {
+  color: #0e1c25 !important;
+  font-size: 14px !important;
+  margin-top: 1px !important;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  background-image: none !important;
+  background-color: #316282 !important;
+  border: none !important;
+}
+.searchbox {
+  background-image: none !important;
+  background-color: #316282 !important;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  margin-bottom: 0px !important;
+  outline: none;
+  height: 27px;
+  padding: 0px 6px !important;
+}
+.search_button {
+  position: absolute;
+  right: 2px;
+  top: 0;
+}
+.search_button img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png);
 }
