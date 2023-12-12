@@ -5,6 +5,17 @@ body * {
 body {
   background-color: #1b2838 !important;
 }
+body h2 {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 10px !important;
+  letter-spacing: 0.03em !important;
+  font-weight: normal;
+  padding-top: 2px !important;
+}
 
 .navbarContainer {
   background: #171d25;
@@ -269,4 +280,25 @@ body {
   top: 1px;
   right: -1px;
   background-image: url(https://store.akamai.steamstatic.com/public/images/v6/search_icon_btn.png);
+}
+.home_cluster {
+  padding-left: 2% !important;
+  padding-right: 2% !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  overflow: hidden;
+}
+.home_page_content {
+  position: relative;
+  width: 940px;
+  margin: 0 auto !important;
+}
+
+.carousel-item {
+  max-height: 600px;
+  min-height: 600px;
+}
+.carousel-item img {
+  width: 400px;
+  height: 600px;
 }
