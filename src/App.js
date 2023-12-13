@@ -3,6 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyNavbar from "./components/Header/MyNavbar";
 import StorePage from "./components/HomePage/StorePage";
+import LoginPage from "./components/Login/LoginPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <MyNavbar />
         <Routes>
           <Route path="" element={<StorePage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </div>

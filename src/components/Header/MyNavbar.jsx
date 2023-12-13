@@ -1,7 +1,10 @@
 import { Button, Container, Dropdown, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../../asset/logo_steam.svg";
 import defaultAvatar from "../../asset/defaultAvatar.jpg";
+import session from "redux-persist/lib/storage/session";
 const MyNavbar = () => {
+  const token = sessionStorage.getItem("token");
+
   return (
     <Container fluid className="navbarContainer">
       <Navbar variant="dark" className="d-block">
@@ -52,19 +55,25 @@ const MyNavbar = () => {
                 <i className="bi bi-bell-fill"></i>
               </Button>
             </div>
-            <Dropdown>
-              <Dropdown.Toggle variant="none" className="account">
-                displayName
-              </Dropdown.Toggle>
+            {token === null ? (
+              <a href="/login" className="login">
+                login
+              </a>
+            ) : (
+              <Dropdown>
+                <Dropdown.Toggle variant="none" className="account">
+                  displayName
+                </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                <Dropdown.Item>Viev my profile</Dropdown.Item>
-                <Dropdown.Item>Account details: user</Dropdown.Item>
-                <Dropdown.Item>Store preference</Dropdown.Item>
-                <Dropdown.Item>Change language</Dropdown.Item>
-                <Dropdown.Item>Sign out of account...</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+                <Dropdown.Menu>
+                  <Dropdown.Item>Viev my profile</Dropdown.Item>
+                  <Dropdown.Item>Account details: user</Dropdown.Item>
+                  <Dropdown.Item>Store preference</Dropdown.Item>
+                  <Dropdown.Item>Change language</Dropdown.Item>
+                  <Dropdown.Item>Sign out of account...</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
           </div>
           <img alt="playerAvatar" className="playerAvatar" src={defaultAvatar} />
         </div>
