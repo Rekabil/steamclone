@@ -20,6 +20,9 @@ a {
   text-decoration: none !important;
   color: #ffffff !important;
 }
+body .footer_spacer {
+  height: 100px;
+}
 
 .navbarContainer {
   background: #171d25;
@@ -428,4 +431,144 @@ a {
 .QR {
   width: 200px !important;
   height: 200px !important;
+}
+.login_text {
+  color: #afafaf !important;
+  font-size: 12px !important;
+}
+.login_textline {
+  color: #afafaf !important;
+  font-size: 12px !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+.login_bottom {
+  display: flex !important;
+  flex-direction: row;
+  padding-top: 48px !important;
+  align-items: center;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: 100% !important;
+  justify-content: center;
+  background-color: #181a21 !important;
+}
+.login_bottom_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+.login_btn {
+  margin-top: 20px !important;
+}
+.headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+.create_btn {
+  padding: 3px 20px !important;
+  color: white;
+  text-shadow: none;
+  margin: 10px 0 10px 0 !important;
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+  display: block;
+  background: #75b022;
+  background: -webkit-linear-gradient(top, #75b022 5%, #588a1b 95%);
+  background: linear-gradient(to bottom, #75b022 5%, #588a1b 95%);
+  background: linear-gradient(to right, #47bfff 5%, #1a44c2 60%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-position: 25%;
+  background-size: 330% 100%;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #b8b6b4;
+}
+.join_desc {
+  max-width: 60% !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  margin-top: 10px !important;
+  color: #b8b6b4 !important;
+  text-decoration: underline !important;
+}
+.login .footer_spacer {
+  background-color: #181a21;
+}
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 0 60px 0 !important;
+  margin: 0 !important;
+  text-size-adjust: none !important;
+  -webkit-text-size-adjust: none !important;
+  background: #171a21;
+}
+
+.footer_content {
+  width: 940px;
+  margin: 0px auto !important;
+  padding-top: 16px !important;
+}
+.rule {
+  height: 8px;
+  border-top: 1px solid #363c44;
+}
+.footer_logo_steam {
+  float: right;
+  padding-top: 2px !important;
+}
+img {
+  -webkit-user-drag: none;
+  border: none;
+}
+.footer_logo {
+  float: left;
+  padding-top: 2px !important;
+}
+.footer_logo img {
+  height: 25px;
+  width: auto;
+}
+.footer_text {
+  float: left !important;
+  margin-left: 12px !important;
+  color: #8f98a0 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+.valve_links {
+  margin-top: 8px !important;
+  font-family: "Motiva Sans", Sans-serif !important;
+  font-weight: normal !important;
+  font-size: 13px !important;
+  color: #61686d !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+.login .footer {
+  background-color: #181a21;
+}
+.page_content {
+  width: 940px;
+  margin: 0 auto !important;
+}
+.register_container {
+  padding: 50px !important;
+  min-height: 600px !important;
+  max-width: 700px !important;
 }

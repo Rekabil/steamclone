@@ -1,6 +1,8 @@
 export const GET_GAMES = "GET_GAMES";
 export const TOKEN = "TOKEN";
 export const GET_COUNTRIES = "GET_COUNTRIES";
+export const REGISTER_EMAIL = "REGISTER_EMAIL";
+export const REGISTER_COUNTRY = "REGISTER_COUNTRY";
 
 const baseEndPoint = "http://localhost:3001";
 
