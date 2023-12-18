@@ -1,9 +1,17 @@
 import { Button, Container, Dropdown, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../../asset/logo_steam.svg";
 import defaultAvatar from "../../asset/defaultAvatar.jpg";
-import session from "redux-persist/lib/storage/session";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getMyProfile } from "../../redux/action";
+
 const MyNavbar = () => {
   const token = sessionStorage.getItem("token");
+  const myProfile = useSelector((state) => state.myProfile.content);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMyProfile());
+  }, []);
 
   return (
     <Container fluid className="navbarContainer">
@@ -55,19 +63,19 @@ const MyNavbar = () => {
                 <i className="bi bi-bell-fill"></i>
               </Button>
             </div>
-            {token === null ? (
+            {myProfile === null ? (
               <a href="/login" className="login">
                 login
               </a>
             ) : (
               <Dropdown>
                 <Dropdown.Toggle variant="none" className="account">
-                  displayName
+                  {myProfile.displayName}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                   <Dropdown.Item>Viev my profile</Dropdown.Item>
-                  <Dropdown.Item>Account details: user</Dropdown.Item>
+                  <Dropdown.Item>Account details: {myProfile.displayName}</Dropdown.Item>
                   <Dropdown.Item>Store preference</Dropdown.Item>
                   <Dropdown.Item>Change language</Dropdown.Item>
                   <Dropdown.Item>Sign out of account...</Dropdown.Item>

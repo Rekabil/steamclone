@@ -54,7 +54,7 @@ const Footer = () => {
           <div style={{ clear: "left" }}></div>
           <br />
           <div className="rule"></div>
-          <div class="valve_links">
+          <div className="valve_links">
             <a href="http://www.valvesoftware.com/about" target="_blank" rel="">
               About Valve
             </a>

@@ -304,13 +304,16 @@ body .footer_spacer {
   width: 940px;
   margin: 0 auto !important;
 }
-
+.carousel {
+  width: 100%;
+  height: 600px;
+}
 .carousel-item {
   max-height: 600px;
   min-height: 600px;
 }
 .carousel-item img {
-  width: 400px;
+  width: 100%;
   height: 600px;
 }
 .login_page {
@@ -571,4 +574,219 @@ img {
   padding: 50px !important;
   min-height: 600px !important;
   max-width: 700px !important;
+}
+.create_account_form_title {
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 30px !important;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+.form_area {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 292px;
+  float: none;
+  margin: 25px 0 !important;
+}
+.form_area label {
+  font-size: 14px;
+  color: #b8b6b4;
+  vertical-align: top;
+}
+.form_area input,
+select {
+  background: #32353c !important;
+  border-radius: 3px !important;
+  color: #e9e9e9 !important;
+  padding: 8px 6px !important;
+  display: block !important;
+  box-shadow: none !important;
+  border: none !important;
+  width: 100% !important;
+  transition: border ease-in-out 0.5s !important;
+  font-family: "Motiva Sans", Sans-serif !important;
+  font-weight: normal !important;
+}
+.form-check {
+  display: flex !important;
+}
+.form-check label {
+  font-size: 14px;
+  color: #b8b6b4;
+  vertical-align: top;
+}
+.registerSubmit {
+  margin-top: 35px !important;
+  border-radius: 2px !important ;
+  border: none !important ;
+  padding: 1px !important ;
+  display: inline-block !important ;
+  cursor: pointer !important ;
+  text-decoration: none !important;
+  color: #c3e1f8 !important ;
+  border-radius: 2px;
+  display: block;
+  background: #75b022;
+  background: -webkit-linear-gradient(top, #75b022 5%, #588a1b 95%) !important;
+  background: linear-gradient(to bottom, #75b022 5%, #588a1b 95%) !important;
+  background: linear-gradient(to right, #47bfff 5%, #1a44c2 60%) !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) !important;
+  background-position: 25% !important;
+  background-size: 330% 100% !important;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3) !important ;
+  padding: 3px 50px !important;
+  font-size: 15px !important;
+  line-height: 30px !important;
+}
+.store_tabs_container {
+  background: -webkit-linear-gradient(top, rgba(42, 71, 94, 1) 5%, rgba(42, 71, 94, 0) 70%);
+  background: linear-gradient(to bottom, rgba(42, 71, 94, 1) 5%, rgba(42, 71, 94, 0) 70%);
+  padding-top: 1px !important;
+  margin-top: 60px !important;
+  padding-left: 2% !important;
+  padding-right: 2% !important;
+  padding-bottom: 20px !important;
+}
+.store_tabs_content {
+  position: relative;
+  width: 940px;
+  margin: 0 auto !important;
+  margin-top: -31px !important;
+}
+.store_tabs_left {
+  width: 618px;
+}
+.nav-tabs {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-tabs .nav-item {
+  margin-top: 0 !important;
+  box-shadow: none !important;
+  padding: 1px !important;
+  display: inline-block;
+  margin-right: 0px !important;
+  background: rgba(42, 63, 90, 0.6) !important;
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+  font-size: 13px !important;
+  color: #2f89bc !important;
+  line-height: 24px !important;
+  cursor: pointer !important;
+  vertical-align: top !important;
+  margin-top: 3px !important;
+  box-shadow: inset 0 -2px 3px 0 rgba(0, 0, 0, 0.25) !important;
+}
+.nav-tabs .nav-item button {
+  padding: 0 10px !important;
+  color: #4f94bc !important;
+}
+.nav-tabs .nav-item .active {
+  color: #ffffff !important;
+  background: #1a2737 !important;
+}
+.tab_seemore {
+  text-align: right;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c6d4df;
+  font-size: 12px;
+}
+.tab_seemore a {
+  border-radius: 2px;
+  border: none;
+  padding: 1px !important;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #fff !important;
+  background: transparent;
+  padding: 0 15px !important;
+  font-size: 12px;
+  line-height: 24px;
+  color: #fff !important;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+
+.game_tabs_list {
+  position: relative;
+  display: block;
+  background: #202d39;
+  background: rgba(0, 0, 0, 0.2);
+  height: 69px 198px !important;
+  margin-bottom: 5px 198px !important;
+  padding-left: 198px !important;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+.tab_item_cap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  line-height: 69px;
+  transition: opacity 0.25s;
+}
+.tab_item_cap img {
+  width: 100%;
+  height: 57px;
+}
+.discount_prices {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  margin-right: 16px !important;
+  background: none;
+  margin-top: 23px !important;
+  width: 133px !important;
+  text-align: right;
+}
+.price {
+  padding: 0 6px !important;
+  color: white;
+}
+.tab_item_content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 7px !important;
+  font-size: 12px !important;
+}
+.tab_item_title {
+  color: #c7d5e0 !important;
+  font-size: 1.25em;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  transition: color 0.25s;
+}
+.tab_item_details {
+  color: #384959;
+  line-height: 20px;
+}
+.platform_img {
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/icon_platform_win.png?v=3);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  opacity: 0.3;
+}
+
+.tab_item_tags {
+  height: 20px;
+  white-space: normal;
+  overflow: hidden;
 }

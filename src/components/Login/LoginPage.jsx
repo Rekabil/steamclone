@@ -2,8 +2,33 @@ import { Button, Form } from "react-bootstrap";
 import { login } from "../../redux/action";
 import QR from "../../asset/qr_code_barcode.jpg";
 import Footer from "../Footer/Footer";
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
+  const navigation = useNavigate();
+  const dispatch = useDispatch();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "") {
+      window.alert("Please Enter An username");
+    } else if (password === "") {
+      window.alert("Please Enter THE Password");
+    } else {
+      const body = {
+        username: username,
+        password: password,
+      };
+
+      dispatch(login(body));
+      navigation("/");
+    }
+  };
+
   return (
     <div className="login">
       <div className="login_page">
@@ -15,18 +40,20 @@ const LoginPage = () => {
                   <div className="login_primaryHeader">Sigh in</div>
                 </div>
                 <div className="form_login">
-                  <Form className="login_form">
+                  <Form className="login_form" onSubmit={handleSubmit}>
                     <Form.Group>
                       <Form.Label className="login_label">SIGN IN WITH ACCOUNT NAME</Form.Label>
-                      <Form.Control className="text_input" type="text" />
+                      <Form.Control className="text_input" type="text" id="username" />
                     </Form.Group>
                     <Form.Group>
                       <Form.Label className="passwordInput">PASSWORD</Form.Label>
-                      <Form.Control type="password" className="text_input" />
+                      <Form.Control type="password" className="text_input" id="password" />
                     </Form.Group>
                     <Form.Check className="logincheckbox" type="checkbox" label="&nbsp;   Remember me" />
                     <div className="d-flex align-items-center justify-content-center">
-                      <Button className="login_Submit">Sign in</Button>
+                      <Button type="submit" className="login_Submit">
+                        Sign in
+                      </Button>
                     </div>
                     <div>&nbsp;</div>
                     <div className="text-center">
