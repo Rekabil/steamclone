@@ -5,6 +5,9 @@ export const REGISTER_EMAIL = "REGISTER_EMAIL";
 export const REGISTER_COUNTRY = "REGISTER_COUNTRY";
 export const GET_MY_PROFILE = "GET_MY_PROFILE";
 export const GET_FILTERED_GAMES = "GET_FILTERED_GAMES";
+export const SINGLE_GAME_FETCH = "SINGLE_GAME_FETCH";
+export const GET_REVIEWS = "GET_REVIEWS";
+
 const baseEndPoint = "http://localhost:3001";
 
 export const fetchGames = (queryParams) => {
@@ -12,7 +15,7 @@ export const fetchGames = (queryParams) => {
     try {
       const queryString = new URLSearchParams(queryParams).toString();
 
-      let resp = await fetch(`${baseEndPoint}/games${queryString}`, {
+      let resp = await fetch(`${baseEndPoint}/games?${queryString}`, {
         method: "GET",
       });
       if (resp.ok) {
@@ -116,6 +119,45 @@ export const fetchFilteredGames = (queryParams) => {
       } else {
         console.log("Error");
         alert("ERROR IN FETCHING GAMES");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const fetchSigleGames = (gameId) => {
+  return async (dispatch, getState) => {
+    try {
+      let resp = await fetch(`${baseEndPoint}/games/${gameId.gameId}`, {
+        method: "GET",
+      });
+      if (resp.ok) {
+        let myGameFetched = await resp.json();
+        dispatch({ type: SINGLE_GAME_FETCH, payload: myGameFetched });
+      } else {
+        console.log("Error");
+        alert("ERROR IN FETCHING GAME");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const fetchReviews = (queryParams) => {
+  return async (dispatch, getState) => {
+    try {
+      const queryString = new URLSearchParams(queryParams).toString();
+
+      let resp = await fetch(`${baseEndPoint}/reviews?${queryString}`, {
+        method: "GET",
+      });
+      if (resp.ok) {
+        let myFetchedReview = await resp.json();
+        dispatch({ type: GET_REVIEWS, payload: myFetchedReview });
+      } else {
+        console.log("Error");
+        alert("ERROR IN FETCHING Reviews");
       }
     } catch (error) {
       console.log(error);

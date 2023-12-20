@@ -1,6 +1,8 @@
 import { Button, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
+import { useNavigate } from "react-router";
 
 const StoreNav = () => {
+  const navigation = useNavigate();
   return (
     <div className="store_header">
       <div>
@@ -15,7 +17,7 @@ const StoreNav = () => {
                 Your Store
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item>Home</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigation("/")}>Home</Dropdown.Item>
                 <Dropdown.Item>Followed Games & Software</Dropdown.Item>
                 <Dropdown.Item>Prefecences</Dropdown.Item>
                 <Dropdown.Item className="mt-1" disabled>

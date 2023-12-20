@@ -4,8 +4,10 @@ import defaultAvatar from "../../asset/defaultAvatar.jpg";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMyProfile } from "../../redux/action";
+import { useNavigate } from "react-router";
 
 const MyNavbar = () => {
+  const navigation = useNavigate();
   const token = sessionStorage.getItem("token");
   const myProfile = useSelector((state) => state.myProfile.content);
   const dispatch = useDispatch();
@@ -16,12 +18,12 @@ const MyNavbar = () => {
   return (
     <Container fluid className="navbarContainer">
       <Navbar variant="dark" className="d-block">
-        <Navbar.Brand>
+        <Navbar.Brand onClick={() => navigation("/")}>
           <img alt="logo" src={logo} height="44" width="176" />
         </Navbar.Brand>
         <Nav>
           <NavDropdown title="STORE">
-            <NavDropdown.Item>Home</NavDropdown.Item>
+            <NavDropdown.Item onClick={() => navigation("/")}>Home</NavDropdown.Item>
             <NavDropdown.Item>Discovery Queue</NavDropdown.Item>
             <NavDropdown.Item>Wishlist</NavDropdown.Item>
             <NavDropdown.Item>Point Shop</NavDropdown.Item>

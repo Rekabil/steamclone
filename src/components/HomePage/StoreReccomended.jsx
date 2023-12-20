@@ -24,7 +24,7 @@ const StoreReccomended = () => {
             gamesFetched.content && gamesFetched.content.lenght !== 0 ? (
               gamesFetched.content.map((game) => (
                 <Carousel.Item>
-                  <img src={blank} alt="preview" />
+                  <img src={game.preview !== null ? game.preview : blank} alt="preview" />
                   <Carousel.Caption>
                     <h3>{game.title}</h3>
                     <p>

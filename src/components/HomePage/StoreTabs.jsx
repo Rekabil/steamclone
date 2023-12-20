@@ -33,7 +33,7 @@ const StoreTabs = () => {
                         return (
                           <a href={"/game/" + game.id} key={game.id} className="game_tabs_list">
                             <div className="tab_item_cap">
-                              <img src={game.preview !== null ? game.preview[1] : blank} alt="game Preview" />
+                              <img src={game.preview !== null ? game.preview : blank} alt="game Preview" />
                             </div>
                             <div className="discount_prices">
                               <div className="price">{game.price !== 0 ? game.price + " $" : "Free To Play"}</div>

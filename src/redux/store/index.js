@@ -9,6 +9,8 @@ import countryReducer from "../reducer/countryReducer";
 import emailReducer from "../reducer/emailReducer";
 import myProfileReducer from "../reducer/myProfileReducer";
 import filteredGamesReducer from "../reducer/filteredGamesReducer";
+import singleGameReducer from "../reducer/singleGameReducer";
+import reviewsReducer from "../reducer/reviewsReducer";
 
 const persistConfig = {
   key: "root",
@@ -24,6 +26,8 @@ const rootReducer = combineReducers({
   country: countryReducer,
   myProfile: myProfileReducer,
   filteredGames: filteredGamesReducer,
+  game: singleGameReducer,
+  reviews: reviewsReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
