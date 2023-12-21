@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MyNavbar from "./components/Header/MyNavbar";
-import StorePage from "./components/HomePage/StorePage";
-import LoginPage from "./components/Login/LoginPage";
-import Register from "./components/Register/Register";
-import Create from "./components/Register/Create";
-import GamePage from "./components/GamePage/GamePage";
+import MyNavbar from "./components/MyNavbar";
+import StorePage from "./components/StorePage";
+import LoginPage from "./components/LoginPage";
+import Register from "./components/Register";
+import Create from "./components/Create";
+import GamePage from "./components/GamePage";
 
 function App() {
   return (
