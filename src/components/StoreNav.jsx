@@ -1,4 +1,4 @@
-import { Button, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
+import { Col, Dropdown, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router";
 
 const StoreNav = () => {

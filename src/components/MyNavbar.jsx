@@ -1,14 +1,13 @@
 import { Button, Container, Dropdown, Nav, NavDropdown, Navbar } from "react-bootstrap";
-import logo from "../../asset/logo_steam.svg";
-import defaultAvatar from "../../asset/defaultAvatar.jpg";
+import logo from "../asset/logo_steam.svg";
+import defaultAvatar from "../asset/defaultAvatar.jpg";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMyProfile } from "../../redux/action";
+import { getMyProfile } from "../redux/action";
 import { useNavigate } from "react-router";
 
 const MyNavbar = () => {
   const navigation = useNavigate();
-  const token = sessionStorage.getItem("token");
   const myProfile = useSelector((state) => state.myProfile.content);
   const dispatch = useDispatch();
   useEffect(() => {

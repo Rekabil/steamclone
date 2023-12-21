@@ -1,8 +1,8 @@
 import { Button, Form } from "react-bootstrap";
-import Footer from "../Footer/Footer";
+import Footer from "./Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { REGISTER_COUNTRY, REGISTER_EMAIL, getCountries } from "../../redux/action";
+import { REGISTER_COUNTRY, REGISTER_EMAIL, getCountries } from "../redux/action";
 import { useNavigate } from "react-router";
 
 const Register = () => {

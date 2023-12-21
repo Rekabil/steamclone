@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchReviews, postReviews } from "../../redux/action";
+import { fetchReviews, postReviews } from "../redux/action";
 import { useEffect } from "react";
 
 const Review = () => {

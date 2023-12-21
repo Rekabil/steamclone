@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFilteredGames } from "../../redux/action";
+import { fetchFilteredGames } from "..s/redux/action";
 import blank from "../../asset/black-background-modern-dark-abstract-texture-vector.jpg";
 const StoreTabs = () => {
   const [key, setKey] = useState("new");
