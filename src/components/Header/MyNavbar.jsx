@@ -14,6 +14,10 @@ const MyNavbar = () => {
   useEffect(() => {
     dispatch(getMyProfile());
   }, []);
+  const handleExit = () => {
+    sessionStorage.setItem("token", null);
+    window.location.reload();
+  };
 
   return (
     <Container fluid className="navbarContainer">
@@ -80,7 +84,7 @@ const MyNavbar = () => {
                   <Dropdown.Item>Account details: {myProfile.displayName}</Dropdown.Item>
                   <Dropdown.Item>Store preference</Dropdown.Item>
                   <Dropdown.Item>Change language</Dropdown.Item>
-                  <Dropdown.Item>Sign out of account...</Dropdown.Item>
+                  <Dropdown.Item onClick={handleExit}>Sign out of account...</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             )}

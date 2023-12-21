@@ -151,13 +151,38 @@ export const fetchReviews = (queryParams) => {
 
       let resp = await fetch(`${baseEndPoint}/reviews?${queryString}`, {
         method: "GET",
+        headers: {
+          Authorization: "Bearer " + sessionStorage.getItem("token"),
+        },
       });
       if (resp.ok) {
         let myFetchedReview = await resp.json();
         dispatch({ type: GET_REVIEWS, payload: myFetchedReview });
       } else {
         console.log("Error");
-        alert("ERROR IN FETCHING Reviews");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const postReviews = (body) => {
+  return async () => {
+    try {
+      const resp = await fetch(`${baseEndPoint}/reviews`, {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + sessionStorage.getItem("token"),
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+      if (resp.ok) {
+        return resp.json();
+      } else {
+        console.log("error");
+        alert("Error in posting review");
       }
     } catch (error) {
       console.log(error);

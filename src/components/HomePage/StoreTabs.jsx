@@ -10,7 +10,7 @@ const StoreTabs = () => {
   const games = useSelector((state) => state.filteredGames.content);
   const [params, setParams] = useState({
     orderBy: "releaseDate",
-    year: "2023",
+    year: "",
   });
 
   useEffect(() => {

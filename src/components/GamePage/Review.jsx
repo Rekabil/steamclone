@@ -1,21 +1,45 @@
 import { Button, Form } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReviews, postReviews } from "../../redux/action";
+import { useEffect } from "react";
 
 const Review = () => {
-  const myProfile = useSelector((state) => state.myProfile.content);
+  const dispatch = useDispatch();
   const game = useSelector((state) => state.game.content);
+  const reviews = useSelector((state) => state.reviews.content);
+  const handleSubmit = (event) => {
+    const radios = document.querySelector("input[name='group1']:checked").value;
+    const title = document.getElementById("reviewTitle").value;
+    const content = document.getElementById("reviewContent").value;
+    const body = {
+      title: title,
+      content: content,
+      gameId: game.id,
+      rating: radios,
+    };
 
-  const radios = document.getElementsByName("group1");
+    dispatch(postReviews(body));
+  };
+
+  useEffect(() => {
+    const query = {
+      gameId: game.id,
+      page: "",
+    };
+
+    dispatch(fetchReviews(query));
+  }, [game]);
+
   return (
     <div className="page_content">
-      <Form className="review_create">
+      <Form className="review_create" onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>Review Title</Form.Label>
-          <Form.Control type="text" placeholder="Title" className="text_input" />
+          <Form.Control type="text" placeholder="Title" className="text_input" id="reviewTitle" />
         </Form.Group>
         <Form.Group>
           <Form.Label>Content </Form.Label>
-          <Form.Control type="text" placeholder="Context" className="text_input" />
+          <Form.Control type="text" placeholder="Context" className="text_input" id="reviewContent" />
         </Form.Group>
         <Form.Group>
           <Form.Group>
@@ -42,6 +66,28 @@ const Review = () => {
             Most Helpful Reviews
             <span> Overall</span>
           </div>
+          {reviews
+            ? reviews.content && reviews.content.lenght !== 0
+              ? reviews.content.map((review) => {
+                  return (
+                    <div className="review_box" key={review.id}>
+                      <div className="leftcol">
+                        <div className="account_name">
+                          <a>{review.user.displayName}</a>
+                        </div>
+                      </div>
+                      <div className="rightcol">
+                        <div className="ratingReview">
+                          Rating: {review.rating}/10; {review.title}
+                        </div>
+
+                        <div>{review.content}</div>
+                      </div>
+                    </div>
+                  );
+                })
+              : "There are no Reviews"
+            : "Loading..."}
         </div>
       </div>
     </div>

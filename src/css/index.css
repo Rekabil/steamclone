@@ -21,7 +21,7 @@ a {
   color: #ffffff !important;
 }
 body .footer_spacer {
-  height: 100px;
+  height: 290px;
 }
 
 .navbarContainer {
@@ -1108,4 +1108,22 @@ h1 {
   text-transform: uppercase;
   font-size: 14px;
   color: #56707f;
+}
+.review_box {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 26px !important;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v6/maincol_gradient_rule.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.review_box .leftcol {
+  width: 184px;
+  float: left;
+  padding: 8px;
+  opacity: 0.6;
+}
+.review_box .rightcol {
+  float: left;
+  width: 400px;
+  position: relative;
 }
