@@ -1,9 +1,9 @@
 import { Button, Form } from "react-bootstrap";
 import { login } from "../redux/action";
 import QR from "../asset/qr_code_barcode.jpg";
-import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import Footer from "./Footer";
 
 const LoginPage = () => {
   const navigation = useNavigate();

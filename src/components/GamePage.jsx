@@ -1,5 +1,5 @@
-import StoreNav from ".StoreNav";
-import Footer from ".Footer";
+import StoreNav from "./StoreNav";
+import Footer from "./Footer";
 import Game from "./Game";
 import GameInfo from "./GameInfo";
 import Review from "./Review";

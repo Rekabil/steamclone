@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { fetchSigleGames } from "../redux/action";
-import blank from "../../asset/black-background-modern-dark-abstract-texture-vector.jpg";
+import blank from "../asset/black-background-modern-dark-abstract-texture-vector.jpg";
 
 const Game = () => {
   const gameId = useParams();

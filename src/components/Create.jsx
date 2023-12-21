@@ -1,8 +1,8 @@
 import { Button, Form } from "react-bootstrap";
-import Footer from "../Footer/Footer";
+import Footer from "./Footer";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { register } from "../../redux/action";
+import { register } from "../redux/action";
 
 const Create = (props) => {
   const dispatch = useDispatch();
