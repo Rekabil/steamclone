@@ -1,5 +1,3 @@
-import { clear } from "@testing-library/user-event/dist/clear";
-
 const Footer = () => {
   return (
     <>
