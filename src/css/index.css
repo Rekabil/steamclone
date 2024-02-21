@@ -306,15 +306,14 @@ body .footer_spacer {
 }
 .carousel {
   width: 100%;
-  height: 600px;
+  height: 353px;
 }
 .carousel-item {
-  max-height: 600px;
-  min-height: 600px;
+  height: 353px;
 }
 .carousel-item img {
   width: 100%;
-  height: 600px;
+  height: 353px;
 }
 .login_page {
   background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181a21 100%) fixed no-repeat,
@@ -738,7 +737,7 @@ select {
   margin: 0 auto !important;
 }
 .tab_item_cap img {
-  width: 100%;
+  width: 112px;
   height: 57px;
 }
 .discount_prices {
@@ -1126,4 +1125,17 @@ h1 {
   float: left;
   width: 400px;
   position: relative;
+}
+
+.preview_img {
+  width: 162px !important;
+  height: 69px !important;
+  display: inline-block;
+  opacity: 0.6;
+}
+.carousel_details {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
 }

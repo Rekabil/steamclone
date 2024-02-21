@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGames } from "../redux/action";
 import blank from "../asset/black-background-modern-dark-abstract-texture-vector.jpg";
@@ -24,13 +24,54 @@ const StoreReccomended = () => {
             gamesFetched.content && gamesFetched.content.lenght !== 0 ? (
               gamesFetched.content.map((game) => (
                 <Carousel.Item>
-                  <img src={game.preview !== null ? game.preview : blank} alt="preview" />
-                  <Carousel.Caption>
-                    <h3>{game.title}</h3>
-                    <p>
-                      {game.description} {game.price === 0 ? "FREE To Play" : game.price + "$"}
-                    </p>
-                  </Carousel.Caption>
+                  <Row>
+                    <Col>
+                      <img src={game.preview !== null ? game.preview[0] : blank} alt="preview" />
+                    </Col>
+                    <Col className="ms-1 d-flex">
+                      <Row className="carousel_details">
+                        <h3>{game.title}</h3>
+                      </Row>
+                      <Row>
+                        <Col>
+                          <img
+                            className="preview_img"
+                            src={game.preview !== null ? game.preview[1] : blank}
+                            alt="preview"
+                          />
+                        </Col>
+                        <Col>
+                          {" "}
+                          <img
+                            className="preview_img"
+                            src={game.preview !== null ? game.preview[2] : blank}
+                            alt="preview"
+                          />
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                          <img
+                            className="preview_img"
+                            src={game.preview !== null ? game.preview[3] : blank}
+                            alt="preview"
+                          />
+                        </Col>
+                        <Col>
+                          <img
+                            className="preview_img"
+                            src={game.preview !== null ? game.preview[4] : blank}
+                            alt="preview"
+                          />
+                        </Col>
+                      </Row>
+                      <Row className="carousel_details">
+                        <p>
+                          {game.description} {game.price === 0 ? "FREE To Play" : game.price + "$"}
+                        </p>
+                      </Row>
+                    </Col>
+                  </Row>
                 </Carousel.Item>
               ))
             ) : (
