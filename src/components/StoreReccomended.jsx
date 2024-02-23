@@ -28,7 +28,7 @@ const StoreReccomended = () => {
                     <Col>
                       <img src={game.preview !== null ? game.preview[0] : blank} alt="preview" />
                     </Col>
-                    <Col className="ms-1 d-flex">
+                    <Col className="ms-1 d-flex flex-column justify-content-evenly align-items-stretch">
                       <Row className="carousel_details">
                         <h3>{game.title}</h3>
                       </Row>

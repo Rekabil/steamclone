@@ -29,7 +29,10 @@ const Game = () => {
           <div className="game_background">
             <div className="game_highlight">
               <div className="game_img">
-                <img src={game.preview !== null ? game.preview : blank} alt="blank" />
+                <img
+                  src={game ? (game.preview !== (undefined || null) ? game.preview[0] : blank) : "Loading"}
+                  alt="blank"
+                />
               </div>
               <div className="game_description">{game.description}</div>
               <div>
@@ -71,9 +74,25 @@ const Game = () => {
             </div>
             <div className="highlight_container">
               <div className="highlight_player">
-                <img src={game.preview !== null ? game.preview : blank} alt="blank" className=" w-100" />
+                <img
+                  src={game ? (game.preview !== (undefined || null) ? game.preview[0] : blank) : "Loading"}
+                  alt="blank"
+                  className=" w-100"
+                />
               </div>
-              <div className="highlight_strip"></div>
+              <div className="highlight_strip">
+                <div className="highlight_strip_scroll">
+                  {game
+                    ? game.preview && game.preview.lenght !== 0
+                      ? game.preview.map((img) => (
+                          <div className="highlight_strip_item">
+                            <img src={img} alt="preview" />
+                          </div>
+                        ))
+                      : "Content Missing."
+                    : "Loading..."}
+                </div>
+              </div>
             </div>
           </div>
         </>
