@@ -29,10 +29,7 @@ const Game = () => {
           <div className="game_background">
             <div className="game_highlight">
               <div className="game_img">
-                <img
-                  src={game ? (game.preview !== (undefined || null) ? game.preview[0] : blank) : "Loading"}
-                  alt="blank"
-                />
+                <img src={game.preview !== undefined ? game.preview[1] : blank} alt="blank" />
               </div>
               <div className="game_description">{game.description}</div>
               <div>
@@ -75,7 +72,7 @@ const Game = () => {
             <div className="highlight_container">
               <div className="highlight_player">
                 <img
-                  src={game ? (game.preview !== (undefined || null) ? game.preview[0] : blank) : "Loading"}
+                  src={game ? (game.preview !== undefined ? game.preview[0] : blank) : "Loading"}
                   alt="blank"
                   className=" w-100"
                 />
@@ -91,6 +88,19 @@ const Game = () => {
                         ))
                       : "Content Missing."
                     : "Loading..."}
+                </div>
+              </div>
+              <div className="slider_ctn">
+                <div className="slider_left">
+                  {" "}
+                  <span></span>
+                </div>
+                <div className="slider">
+                  <div className="slider_bg"></div>
+                  <div className="handle"></div>
+                </div>
+                <div className="slider_right">
+                  <span></span>
                 </div>
               </div>
             </div>

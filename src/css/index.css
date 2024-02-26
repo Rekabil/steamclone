@@ -832,10 +832,11 @@ select {
   padding-bottom: 1px !important;
   background-repeat: no-repeat;
   margin: 0px auto !important;
+  height: 400px;
 }
 .game_highlight {
   width: 324px;
-  margin-left: 0px !important;
+  margin-left: 16px !important;
   float: right;
 }
 .game_highlight a {
@@ -1062,6 +1063,7 @@ h1 {
   padding-right: 12px !important;
   height: 24px;
   position: relative;
+  margin-bottom: 9px !important;
 }
 .btn-addToCart {
   position: relative !important;
@@ -1156,4 +1158,83 @@ h1 {
   padding-bottom: 1.25rem;
   color: #fff;
   text-align: center;
+}
+
+.slider_ctn {
+  position: relative;
+  height: 18px !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slider_ctn .slider_left {
+  position: absolute;
+  width: 38px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px !important;
+  cursor: pointer;
+}
+.slider_ctn .slider_right {
+  position: absolute;
+  width: 38px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px !important;
+  cursor: pointer;
+}
+
+.slider_left span {
+  display: inline-block;
+  background-position: -18px 0px !important;
+  background-repeat: no-repeat;
+  background-image: url(https://store.akamai.steamstatic.com/public/images//v6/icon_cluster_controls.png);
+  width: 9px !important;
+  height: 7px !important;
+  margin-left: 13px !important;
+  margin-top: 5px !important;
+  margin-bottom: 7px !important;
+}
+.slider {
+  position: absolute;
+  left: 39px !important;
+  right: 39px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px !important;
+}
+.slider_ctn .handle {
+  position: absolute;
+  top: 0 !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px !important;
+  height: 18px !important;
+  width: 60px !important;
+  cursor: pointer;
+  left: 230px;
+}
+.slider_right span {
+  display: inline-block;
+  background-position: -9px 0px !important;
+  background-repeat: no-repeat;
+  background-image: url(https://store.akamai.steamstatic.com/public/images//v6/icon_cluster_controls.png);
+  width: 9px !important;
+  height: 7px !important;
+  margin-left: 15px !important;
+  margin-top: 5px !important;
+  margin-bottom: 7px !important;
+}
+.slider_right {
+  right: 0;
+}
+.slider_ctn .slider_left,
+.slider_ctn .slider_right,
+.slider .handle {
+  background-color: rgba(35, 60, 81, 0.4);
 }
